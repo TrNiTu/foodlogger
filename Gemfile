@@ -12,6 +12,8 @@ gem "sprockets-rails"
 # sassc-rails
 gem "sassc-rails"
 
+gem 'htmlbeautifier'
+
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
 
