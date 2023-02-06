@@ -1,6 +1,6 @@
 <p style="color: green"><%= notice %></p>
 <% content_for :title do %>
-  foodlog &ndash; <%= DateTime.now %>
+  foodlog &ndash; <%= DateTime.now.to_fs(:custom_date_format) %>
 <% end %>
 <div class="columns mt-6 is-centered">
   <% @entries.each do |entry| %>
@@ -15,7 +15,7 @@
             <p><span class="has-text-weight-bold"><%= entry.proteins %></span> grams of protein</p>
             <p><span class="has-text-weight-bold"><%= entry.carbohydrates %></span> grams of carbohydrates</p>
             <p><span class="has-text-weight-bold"><%= entry.fats %></span> grams of fats</p>
-            <p class="italic">Logged <%= time_ago_in_words(entry.created_at) %></p>
+            <p class="italic">Logged <%= time_ago_in_words(entry.created_at) %> ago</p>
           </div>
         </div>
         <div class="card-footer">
