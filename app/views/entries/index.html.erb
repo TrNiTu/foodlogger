@@ -1,6 +1,6 @@
 <p style="color: green"><%= notice %></p>
 <% content_for :title do %>
-  foodlog &ndash; <%= DateTime.now.to_fs(:custom_date_format) %>
+  Food Logger &ndash; <%= DateTime.now.to_fs(:custom_date_format) %>
 <% end %>
 <div class="columns mt-6 is-centered">
   <% @entries.each do |entry| %>
